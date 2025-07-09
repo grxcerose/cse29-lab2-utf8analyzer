@@ -29,6 +29,18 @@ while (input[i]) {
 printf("\n"); // meets requirement 5 
 
 
+byte_lengths[codepoint_count] = bytes;
+    printf("Codepoint byte lengths: ");
+for (int j = 0; j < codepoint_count; j++) {
+    printf("%d ", byte_lengths[j]);
+}
+printf("\n"); // meets requiremnet 6 
+    
+
+
+
+}
+
     
     
     // implement the UTF-8 analyzer here
