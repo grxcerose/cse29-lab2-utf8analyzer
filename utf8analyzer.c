@@ -42,10 +42,8 @@ int main(int argc, char *argv[]) {
 	isValidASCII("abcde");
 	isValidASCII("abcde🐿️");
 
-    //if (argc != 2) {
-    //    fprintf(stderr, "Usage: utf8analyzer \"<UTF-8 encoded string>\"\n");
-    //    return 1;
-    //}
-
-    // implement the UTF-8 analyzer here
+    if (argc != 2) {
+        fprintf(stderr, "Usage: utf8analyzer \"<UTF-8 encoded string>\"\n");
+        return 1;
+    }
 }
