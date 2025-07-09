@@ -63,6 +63,14 @@ void print_codepoints(int *cps, int count) {
     printf("\n");
 }  
 
+void print_byte_lengths(int *byte_lengths, int count) {
+    printf("Bytes used to represent each codepoint: ");
+    for (int i = 0; i < count; i++) {
+        printf("%d ", byte_lengths[i]);
+    }
+    printf("\n");
+}
+
 
 int main(int argc, char *argv[]) {
 	isValidASCII("abcde");
