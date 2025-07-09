@@ -23,19 +23,19 @@ void isValidASCII(char argv[]){
 
 //task 2
 void makeUppercase(char argv[]){
-	char output[100] = "";
-	char temp = '';
-	for(int i = 0; i<strlen(argv); i++){
-		temp = 'a';
-		if((argv[i]<=122)&&(argv[i]>=97)){
-			temp = (argv[i] - 32);	
-		}
-		else{
-			temp = argv[i];
-		}
-		output[i] = temp; 
-	}
-	printf("u")
+        char output[100] = "";
+        char temp;
+        for(int i = 0; i<strlen(argv); i++){
+                temp = 'a';
+                if((argv[i]<=122)&&(argv[i]>=97)){
+                        temp = (argv[i] - 32);
+                }
+                else{
+                        temp = argv[i];
+                }
+                output[i] = temp;
+        }
+        printf("Uppercased ASCII: %s\n",output);
 }
 
 int main(int argc, char *argv[]) {
