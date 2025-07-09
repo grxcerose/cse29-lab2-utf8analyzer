@@ -10,5 +10,26 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
+    
+    int codepoint_count = 0;
+...
+while (input[i]) {
+    int bytes;
+    int cp = decode_utf8(&input[i], &bytes);
+    ...
+    codepoint_count++;
+    i += bytes;
+} // meets requirement 4 
+// printf("Number of UTF-8 codepoints: %d\n", codepoint_count);
+    printf("Codepoints (decimal): ");
+    cps[codepoint_count] = cp;
+    for (int j = 0; j < codepoint_count; j++) {
+    printf("%d ", cps[j]);
+}
+printf("\n"); // meets requirement 5 
+
+
+    
+    
     // implement the UTF-8 analyzer here
 }
