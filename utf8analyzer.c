@@ -38,6 +38,12 @@ void makeUppercase(char argv[]){
         printf("Uppercased ASCII: %s\n",output);
 }
 
+//task 3 (may have some problem)
+void LengthOfstring(char argv[]){
+        uint32_t output = strlen(argv);
+        printf("Length in bytes: %d\n",output);
+}
+
 
 int count_codepoints(const char *input, int *cps, int *byte_lengths) {
     int i = 0;
