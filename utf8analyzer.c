@@ -54,6 +54,16 @@ int count_codepoints(const char *input, int *cps, int *byte_lengths) {
     return count;
 }
 
+
+void print_codepoints(int *cps, int count) {
+    printf("Decimal representations of each codepoint: ");
+    for (int i = 0; i < count; i++) {
+        printf("%d ", cps[i]);
+    }
+    printf("\n");
+}  
+
+
 int main(int argc, char *argv[]) {
 	isValidASCII("abcde");
 	isValidASCII("abcde🐿️");
