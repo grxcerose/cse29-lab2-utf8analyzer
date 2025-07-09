@@ -9,7 +9,6 @@ int main(int argc, char *argv[]) {
         fprintf(stderr, "Usage: utf8analyzer \"<UTF-8 encoded string>\"\n");
         return 1;
     }
-    substr6("abcdegggg");
 }
 void substr6(const char str[]) {
     int index = 0;
