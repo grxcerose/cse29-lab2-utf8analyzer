@@ -38,6 +38,22 @@ void makeUppercase(char argv[]){
         printf("Uppercased ASCII: %s\n",output);
 }
 
+
+int count_codepoints(const char *input, int *cps, int *byte_lengths) {
+    int i = 0;
+    int count = 0;
+    while (input[i]) {
+        int bytes;
+        int cp = decode_utf8(&input[i], &bytes);
+        if (cp == -1) return -1;  // invalid UTF-8
+        cps[count] = cp;
+        byte_lengths[count] = bytes;
+        count++;
+        i += bytes;
+    }
+    return count;
+}
+
 int main(int argc, char *argv[]) {
 	isValidASCII("abcde");
 	isValidASCII("abcde🐿️");
